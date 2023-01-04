@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticktacktok</title>
+  </head>
+  <body>
+    <h1>Tiock</h1>
+    <button onclick="testfucntion()">GO</button></br></br></br>
+    
+    
+    
+    <button onclick="komorkaJeden('100000000')"><p id="100000000"></p></button>
+    <button onclick="komorkaJeden('010000000')"><p id="010000000"></p></button>
+    <button onclick="komorkaJeden('001000000')"><p id="001000000"></p></button>
+    <button onclick="komorkaJeden('000100000')"><p id="000100000"></p></button>
+    <button onclick="komorkaJeden('000010000')"><p id="000010000"></p></button>
+    <button onclick="komorkaJeden('000001000')"><p id="000001000"></p></button>
+    <button onclick="komorkaJeden('000000100')"><p id="000000100"></p></button>
+    <button onclick="komorkaJeden('000000010')"><p id="000000010"></p></button>
+    <button onclick="komorkaJeden('000000001')"><p id="000000001"></p></button>
+    
+    
+    
+    <script>
+var turn = "X"
+
+      function testfucntion() {
+        let komorka = "-"
+        let IOOOOOOOO = komorka
+        let OIOOOOOOO = komorka
+        let OOIOOOOOO = komorka
+        let OOOIOOOOO = komorka
+        let OOOOIOOOO = komorka
+        let OOOOOIOOO = komorka
+        let OOOOOOIOO = komorka
+        let OOOOOOOIO = komorka
+        let OOOOOOOOI = komorka
+        document.getElementById("100000000").innerHTML = IOOOOOOOO
+        document.getElementById("010000000").innerHTML = OIOOOOOOO
+        document.getElementById("001000000").innerHTML = OOIOOOOOO
+        document.getElementById("000100000").innerHTML = OOOIOOOOO
+        document.getElementById("000010000").innerHTML = OOOOIOOOO
+        document.getElementById("000001000").innerHTML = OOOOOIOOO
+        document.getElementById("000000100").innerHTML = OOOOOOIOO
+        document.getElementById("000000010").innerHTML = OOOOOOOIO
+        document.getElementById("000000001").innerHTML = OOOOOOOOI
+      }
+
+      function komorkaJeden(cell) {
+      
+          var tfujstary = String(document.getElementById(cell).textContent)
+          
+          
+          if (tfujstary == 'X'){
+            alert("Zajete")
+            
+          }
+          else if (tfujstary == 'O'){
+            alert("Zajete")
+          }
+          else {
+          
+          document.getElementById(cell).innerHTML = turn
+          changeTurn(turn)
+          }
+}
+          function changeTurn(turn) {
+            alert(turn)
+            if (turn == "X"){
+              var turn = "O"
+              console.log("tura zmienia sie na " + turn)
+            } else if (turn == "O"){
+              var turn = "X"
+              console.log("tura zmienia sie na " + turn)
+            } else {
+              console.log("O kurwa")
+            }
+              
+          }
+</script>
+</body>
+
+
+
+
+
+
+
+  <style>
+    /* UTILITIES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: cursive;
+    }
+    a {
+      text-decoration: none;
+    }
+    li {
+      list-style: none;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: teal;
+      color: #fff;
+    }
+    .nav-links a {
+      color: #fff;
+    }
+    /* LOGO */
+    .logo {
+      font-size: 32px;
+    }
+    /* NAVBAR MENU */
+    .menu {
+      display: flex;
+      gap: 1em;
+      font-size: 18px;
+    }
+    .menu li:hover {
+      background-color: #4c9e9e;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+    .menu li {
+      padding: 5px 14px;
+    }
+  </style>
+</html>
